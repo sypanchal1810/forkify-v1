@@ -1,0 +1,24 @@
+{
+  "name": "forkify-v1",
+  "version": "1.0.0",
+  "description": "Recipe Application",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --no-scope-hoist --dist-dir ./dist"
+  },
+  "author": "saurabh",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.24.1",
+    "fractional": "^1.0.0",
+    "leaflet": "^1.8.0",
+    "lodash-es": "^4.17.21",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
+    "parcel": "^2.8.0",
+    "sass": "^1.56.1"
+  }
+}
