@@ -1,24 +1,34 @@
 {
-  "name": "forkify-v1",
+  "name": "Forkify-Project",
   "version": "1.0.0",
-  "description": "Recipe Application",
+  "description": "Recipe Cooking At Your Home - Search over 1,000,000 Recipes",
   "default": "index.html",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --no-scope-hoist --dist-dir ./dist"
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "init": "snowpack init",
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
+    "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "format": "prettier --write **/**.**"
   },
-  "author": "saurabh",
+  "author": "sypanchal1810",
   "license": "ISC",
   "dependencies": {
-    "core-js": "^3.24.1",
+    "core-js": "^3.30.2",
     "fractional": "^1.0.0",
-    "leaflet": "^1.8.0",
     "lodash-es": "^4.17.21",
-    "regenerator-runtime": "^0.13.9"
+    "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.0",
-    "parcel": "^2.8.0",
-    "sass": "^1.56.1"
+    "autoprefixer": "^10.4.14",
+    "concat": "^1.0.3",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.8",
+    "snowpack": "^3.8.8"
   }
 }
