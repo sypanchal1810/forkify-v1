@@ -13,6 +13,12 @@ import 'regenerator-runtime/runtime';
 
 // https://forkify-api.herokuapp.com/v2
 
+///////////////////////////////////////////////////////////
+// Set current year
+const yearEl = document.querySelector('.year');
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;
+
 ///////////////////////////////////////
 
 const controlRecipe = async function () {
